@@ -1,0 +1,191 @@
+#body{
+    background-color: rgba(72, 62, 62, 0.066);
+}
+
+#nadpis{
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#h2{
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#tabulka {
+    position: relative;
+    margin: 100px auto;
+    bottom: 300px;
+    width: 90%;
+    max-width: 320px;
+    height: 300px;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.71);
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+#userAnswer{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    margin: auto;
+    font-size: 20px;
+    display: block;
+    position: relative;
+    bottom: 18px;
+}
+
+#překlad-nápis{
+    position: absolute;
+    top: 14px;
+    margin-left: -140px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    max-width: 2500px;
+}
+
+#button1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 250px;
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(105, 209, 0);
+    cursor: pointer;
+}
+
+
+#button2{
+    position: absolute;
+    bottom: 252px;
+    left: 80%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    height: 35px;
+    border-radius: 3px;
+    border: #fff;
+    background-color: rgb(151, 152, 151);
+    text-align: center;
+    width: 80%;
+    max-width: 90px;
+    cursor: pointer;
+}
+
+#result {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    width: 90%;         /* místo max-width */
+    max-width: none;    /* zruší omezení */
+    word-wrap: break-word;
+}
+
+
+
+#myPieChart{
+    position: relative;
+    margin: 100px auto;
+    bottom: 50px;
+    left: -150px;
+}
+
+#vyhodnocení{
+    position: relative;
+    margin: 100px auto;
+    top: -660px;
+    left: 15%;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#numberOfIncorrectAnswers{
+    margin: 15px;
+    position: relative;
+    left: -15px;
+}
+
+#button3 {
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(151, 152, 151);
+    text-align: center;
+    width: 180px;
+    position: fixed;
+    bottom: 25%; /* nebo např. 40px, podle potřeby */
+    left: 76%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+
+
+#button4{
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(151, 152, 151);
+    text-align: center;
+    width: 130px;
+    position: fixed;
+    bottom: 25%; /* nebo např. 40px, podle potřeby */
+    left: 64%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #tabulka {
+        width: 95%;
+    }
+
+    #myPieChart {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        left: 0;
+        top: 0;
+    }
+
+    #button1, #button2, #button3, #button4 {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #vyhodnocení {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+    }
+}

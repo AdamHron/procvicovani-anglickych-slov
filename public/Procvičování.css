@@ -1,0 +1,200 @@
+#nadpis{
+    font-size: 2.5em;
+    color: hsl(0, 100%, 60%);
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.navbar ul{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 250px;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    background-color: hsl(0, 100%, 60%);
+}
+
+.navbar a{
+    padding: 15px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.navbar li{
+    float: left;
+}
+
+.navbar a:hover{
+    background-color: rgb(227, 52, 52);
+}
+
+#tabulka{
+    position: fixed;
+    bottom: 50px;
+    left: 20px;
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.71);
+    background-color: #fff;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 1px solid; height: 350px; width: 250px;
+    border-radius: 8px;
+}
+
+#trida{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    margin-left: 120px;
+    font-size: 20px;
+    display: block;
+}
+
+#unit{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    margin-left: 120px;
+    font-size: 20px;
+    display: block;
+}
+
+#subunit{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    margin-left: 120px;
+    font-size: 20px;
+    display: block;
+}
+
+#trida-nápis{
+    position: relative;
+    top: 20px;
+    margin-left: 23px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#unit-nápis{
+    position: relative;
+    top: 20px;
+    margin-left: 23px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#subunit-nápis{
+    position: relative;
+    top: 20px;
+    margin-left: 23px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#button{
+    position: relative;
+    bottom: 10px;
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    height: 35px;
+    border-radius: 3px;
+    border: #fff;
+    background-color: rgb(105, 209, 0);
+    margin-left: 35px;
+    width: 180px;
+    cursor: pointer;
+}
+
+#button-nepravidelná_slovesa{
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    height: 35px;
+    border-radius: 3px;
+    border: #fff;
+    background-color: rgb(255, 51, 51);
+    margin-left: 35px;
+    margin-top: 8px;
+    width: 180px;
+    cursor: pointer;
+}
+
+
+.popisek{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#obrázek{
+    height: 150px;
+    margin: 3px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#table {
+    position: fixed;
+    left: 380px;
+    top: 280px;
+    margin-top: 50px;
+    margin: 0 auto;
+    max-width: 1000px;
+    height: 400px;
+    overflow: auto;
+    display: flex;
+    justify-content: flex-start;  /* změněno na flex-start pro stabilní umístění */
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#body {
+    overflow: auto;
+}
+
+#zpráva{
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.lekce {
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    border: 1px solid;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 150px;  /* Fixní šířka */
+    max-width: 200px; /* Maximální šířka */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;  /* Zajištění, že se nebudou zbytečně zarovnávat na jiný řádek */
+}
+
+.lekce:hover {
+    margin-top: -20px;
+}
+
+.lekce:active {
+    border: 2px solid;
+}
+
+/* Responsive Design pro menší obrazovky */
+@media (max-width: 768px) {
+    .lekce {
+        max-width: 100%;  /* Na malých obrazovkách bude lekce zabírat 100% šířky */
+    }
+
+    #table {
+        flex-direction: column;  /* Na menších obrazovkách se lekce uspořádají vertikálně */
+    }
+}

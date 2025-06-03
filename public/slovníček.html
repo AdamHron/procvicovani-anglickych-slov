@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Slovníček s anglickými slovy a jejich českými překlady pro základní školu.">
+    <link rel="stylesheet" href="Slovníček.css">
+    <title>Slovníček</title>
+</head>
+<body id="body">
+    <h1 align="center" id="nadpis">
+        <b>Slovníček</b>
+    </h1>
+    <br>
+    </br>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Procvičování</a></li>
+            <li><a href="slovníček.html">Slovníček</a></li>
+        </ul>
+    </nav>
+
+    <div id="zpráva"></div>
+
+    <form align="left" id="tabulka">
+
+        <label for="trida" id="trida-nápis">třída:</label>
+        <select id="trida" required>
+
+        <option value="0"></option>            
+
+        <option value="1">1</option>
+    
+        <option value="2">2</option>
+    
+        <option value="3">3</option>
+    
+        <option value="4">4</option>
+    
+        <option value="5">5</option>
+    
+        <option value="6">6</option>
+    
+        <option value="7">7</option>
+    
+        <option value="8">8</option>
+    
+        <option value="9">9</option>
+
+        </select><br>
+
+
+        <label for="unit" id="unit-nápis">unit:</label>
+        <select id="unit">
+
+        <option value="0"></option>
+                    
+        <option value="1">1</option>
+    
+        <option value="2">2</option>
+    
+        <option value="3">3</option>
+
+        <option value="4">4</option>
+    
+        <option value="5">5</option>
+    
+        <option value="6">6</option>
+
+        </select><br>
+
+
+        <label for="subunit" id="subunit-nápis">subunit:</label>
+        <select id="subunit">
+
+            <option value="0"></option>
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+
+        </select>
+
+        <br>
+        <br>
+        <br>
+        <button id="button">vyhledat</button>
+        <hr>
+        <button id="nepravidelna-button">Nepravidelná slovesa</button>
+    
+    </form>
+
+    <div id="table">
+        <table id="slovnicek" width="1000" border="1" align="right">
+          <thead  id="slovnicek-head">
+            <tr align="center" class="table_sloupce">
+              <th width="100">anglické slovo</th>
+              <th width="100">české slovo</th>
+            </tr>
+          </thead>
+          <tbody id="slovnicek-body">
+            <!-- Řádky se vloží sem dynamicky -->
+          </tbody>
+        </table>
+      </div>
+
+      
+    <script src="slovníček.js" defer></script>
+
+</body>
+</html>

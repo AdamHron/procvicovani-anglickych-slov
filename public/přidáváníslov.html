@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Přidávání anglických slov a jejich dat do databáze anglických slov a jejich dat pro základní školu.">
+  <meta charset="UTF-8" />
+  <title>Přidat slovíčka</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 100%;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+      margin-right: 65rem;
+    }
+    /* KONTEJNER pro form a tabulku vedle sebe */
+    #main-container {
+      display: flex;
+      gap: 10rem;
+      align-items: flex-start; /* zarovnání nahoru */
+    }
+    form {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 400px;
+      box-sizing: border-box;
+      margin-left: 2rem;
+      margin-top: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #trida {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #unit {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #subunit {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.2rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #přidat {
+      margin-top: 1rem;
+      background-color: #3498db;
+      border: none;
+      padding: 0.7rem 1.4rem;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #button-upravit {
+      margin-top: 1rem;
+      background-color: green;
+      border: none;
+      padding: 0.7rem 0.8rem;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: -1px;
+    }
+    #button-smazat {
+      margin-top: 1rem;
+      background-color: red;
+      border: none;
+      padding: 0.7rem 0.8rem;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: -1px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    #vysledek {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    h2 {
+      min-width: 200px;
+      text-align: center;
+      color: #2c3e50;
+      margin-top: -4rem;
+      margin-left: 6rem;
+    }
+    /* Kontejner tabulky */
+    #table-container {
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      overflow-y: scroll;
+      max-height: 500px; /* nastavení max výšky + scroll */
+      flex-grow: -1; /* zabere zbytek šířky */
+      margin-left: -63rem;
+    }
+    table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+      border-radius: 6px;
+      overflow: auto;
+    }
+
+th:nth-child(1), td:nth-child(1) { width: 22%; } /* CZ */
+th:nth-child(2), td:nth-child(2) { width: 22%; } /* EN */
+th:nth-child(3), td:nth-child(3) { width: 22%; } /* Výslovnost */
+th:nth-child(4), td:nth-child(4) { width: 9%; } /* Třída */
+th:nth-child(5), td:nth-child(5) { width: 9%; } /* Unit */
+th:nth-child(6), td:nth-child(6) { width: 15%; } /* Subunit */
+
+
+    th, td {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+      font-size: clamp(12px, 1.5vw, 16px); /* Dynamická velikost písma */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    tr:hover {
+      background-color: #f1faff;
+    }
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td:hover {
+  cursor: help;
+}
+    #razeni {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  margin-left: -8rem;
+  margin-top: -4rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#razeni:hover,
+#razeni:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+label[for="razeni"] {
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-top: -3.5rem;
+  display: inline-block;
+  color: #2c3e50;
+}
+  </style>
+</head>
+<body>
+  <h1>Přidat slovíčko</h1>
+
+  <div id="main-container">
+    <form id="slovicko-form">
+      <label>Česky: <input type="text" name="cz" required></label>
+      <label>Anglicky: <input type="text" name="en" required></label>
+<label>Třída:
+  <select name="trida" id="trida" required>
+    <option value="" disabled selected></option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+  </select>
+</label>
+
+<label>Unit:
+  <select name="unit" id="unit" required>
+    <option value="" disabled selected></option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+  </select>
+</label>
+
+<label>Subunit:
+  <select name="subunit" id="subunit" required>
+    <option value="" disabled selected></option>
+    <option value="a">a</option>
+    <option value="b">b</option>
+    <option value="c">c</option>
+    <option value="d">d</option>
+  </select>
+</label>
+
+      <button id="přidat" type="submit">Přidat</button>
+      <p id="vysledek"></p>
+    </form>
+
+<label for="razeni">Seřadit:</label>
+<select id="razeni">
+  <option value="naposledy">Naposledy přidané/upravené</option>
+  <option value="trida-asc">Třída (vzestupně)</option>
+  <option value="trida-desc">Třída (sestupně)</option>
+</select>
+
+
+    <h2>Seznam slovíček</h2>
+    <div id="table-container">
+      <table id="slovicka-tab">
+        <thead>
+          <tr>
+            <th>Česky</th>
+            <th>Anglicky</th>
+            <th>Třída</th>
+            <th>Unit</th>
+            <th>Subunit</th>
+            <th>Akce</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Tady budou přidaná slova -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

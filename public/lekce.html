@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Procvičování anglických slov pro základní školu - lekce - překlad z angličtiny do češtiny.">
+    <title>lekce</title>
+    <link rel="stylesheet" href="lekce.css">
+</head>
+<body id="body"><div class="container">
+    <br>
+    <br>
+
+    <h1 align="center" id="nadpis">
+        <b>Lekce</b>
+    </h1>
+    <canvas id="myPieChart" width="400px" height="400px"></canvas>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="vyhodnocení">
+        <div id="numberOfCorrectAnswers"></div>
+        <div id="numberOfIncorrectAnswers"></div>
+        <div id="úspěšnost"></div>
+        
+        <a href="index.html">
+        <button id="button3" type="button">Zpět na procvičování</button>
+        </a>
+        <a href="lekce.html">
+            <button id="button4" type="button">Zkusit znovu</button>
+        </a>
+
+    </div>
+
+    <form id="tabulka" onsubmit="return false;">
+        <br>
+        <label for="userAnswer" id="překlad-nápis">přelož</label><br>
+        <h2 id="h2"></h2><br>
+        <input type="text" id="userAnswer" placeholder="Napiš odpověď"><br>
+
+        <div id="result"></div>
+        <button id="button1" type="button" onclick="button()">hotovo</button>
+        <button id="button2" type="button" onclick="next()">Další</button>
+    </form>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    const selectedTrida = localStorage.getItem("selectedTrida");
+    const selectedUnit = localStorage.getItem("selectedUnit");
+    const selectedSubunit = localStorage.getItem("selectedSubunit");
+    const selectedNepravidelnáSlovesa = localStorage.getItem("selectedNepravidelnáSlovesa");
+
+    const nadpisLabel = document.getElementById("překlad-nápis");
+    const nadpis = document.getElementById("nadpis");
+
+    if (selectedNepravidelnáSlovesa === "1") {
+        nadpisLabel.textContent = "Uprav na past simple";
+        nadpis.textContent = "Nepravidelná slovesa - Past simple";
+    } else if (selectedNepravidelnáSlovesa === "2") {
+        nadpisLabel.textContent = "Uprav na past participle";
+        nadpis.textContent = "Nepravidelná slovesa - Past participle";
+    } else if (selectedNepravidelnáSlovesa === "3") {
+        nadpisLabel.textContent = "Přelož";
+        nadpis.textContent = "Nepravidelná slovesa - Překlad";
+    } else if (selectedTrida && selectedUnit && selectedSubunit) {
+        nadpis.textContent = `Třída ${selectedTrida}, Unit ${selectedUnit}, Subunit ${selectedSubunit}`;
+    } else {
+        nadpisLabel.textContent = "Přelož";
+        nadpis.textContent = "Lekce";
+    }
+});
+</script>
+
+
+
+<div id="slovicka"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="lekce.js" defer></script></div>
+</body>
+</html>
