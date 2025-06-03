@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rozcestník - procvičování anglických slov pro základní školu.">
+    <link rel="stylesheet" href="Procvičování.css">
+    <title>Procvičování</title>
+</head>
+<body id="body">
+    <h1 align="center" id="nadpis">
+        <b>Procvičování</b>
+    </h1>
+    <br>
+    <br>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Procvičování</a></li>
+            <li><a href="slovníček.html">Slovníček</a></li>
+        </ul>
+    </nav>
+
+    <div id="zpráva"></div>
+
+    <form action="registration.php" method="POST" align="left" id="tabulka">
+
+        <label for="trida" id="trida-nápis">třída:</label>
+        <select id="trida" required>
+    
+        <option value="0"></option>            
+    
+        <option id="trida1" value="1">1</option>
+        
+        <option id="trida2" value="2">2</option>
+        
+        <option id="trida3" value="3">3</option>
+        
+        <option id="trida4" value="4">4</option>
+        
+        <option id="trida5" value="5">5</option>
+        
+        <option id="trida6" value="6">6</option>
+        
+        <option id="trida7" value="7">7</option>
+        
+        <option id="trida8" value="8">8</option>
+        
+        <option id="trida9" value="9">9</option>
+
+        </select><br>
+    
+    
+        <label for="unit" id="unit-nápis">unit:</label>
+        <select id="unit">
+    
+        <option value="0"></option>
+                        
+        <option value="1">1</option>
+        
+        <option value="2">2</option>
+        
+        <option value="3">3</option>
+    
+        <option value="4">4</option>
+        
+        <option value="5">5</option>
+        
+        <option value="6">6</option>
+    
+        </select><br>
+    
+    
+        <label for="subunit" id="subunit-nápis">subunit:</label>
+        <select id="subunit">
+    
+        <option value=""></option>
+                        
+        <option value="a">a</option>
+
+        <option value="b">b</option>
+
+        <option value="c">c</option>
+
+        <option value="d">d</option>
+    
+        </select>
+    
+        <br>
+        <br>
+        <br>
+        <button type="button" onclick="vyhledat()" id="button">vyhledat</button>
+        <hr>
+        <button type="button" onclick="NepravidelnáSlovesa()" id="button-nepravidelná_slovesa">Nepravidelná slovesa</button>
+
+        
+    </form>        
+
+    <div id="table">
+        <table width="100" id="table1" class="lekce" data-trida="1" data-unit="1" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 1 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table2" class="lekce" data-trida="1" data-unit="1" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 1 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table3" class="lekce" data-trida="1" data-unit="1" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 1 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table4" class="lekce" data-trida="1" data-unit="1" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 1 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table5" class="lekce" data-trida="1" data-unit="2" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 2 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table6" class="lekce" data-trida="1" data-unit="2" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 2 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table7" class="lekce" data-trida="1" data-unit="2" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 2 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table8" class="lekce" data-trida="1" data-unit="2" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 2 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table9" class="lekce" data-trida="1" data-unit="3" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 3 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table10" class="lekce" data-trida="1" data-unit="3" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 3 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table11" class="lekce" data-trida="1" data-unit="3" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 3 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table12" class="lekce" data-trida="1" data-unit="3" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 3 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table13" class="lekce" data-trida="1" data-unit="4" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 4 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table14" class="lekce" data-trida="1" data-unit="4" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 4 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table15" class="lekce" data-trida="1" data-unit="4" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 4 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table16" class="lekce" data-trida="1" data-unit="4" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 4 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table17" class="lekce" data-trida="1" data-unit="5" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 5 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table18" class="lekce" data-trida="1" data-unit="5" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 5 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table19" class="lekce" data-trida="1" data-unit="5" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 5 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table20" class="lekce" data-trida="1" data-unit="5" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 5 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table21" class="lekce" data-trida="1" data-unit="6" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 6 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table22" class="lekce" data-trida="1" data-unit="6" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 6 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table23" class="lekce" data-trida="1" data-unit="6" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 6 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table24" class="lekce" data-trida="1" data-unit="6" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level1Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 1 Unit: 6 Subunit: d</td>
+            </tr>
+        </table>
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100" id="table26" class="lekce" data-trida="2" data-unit="1" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 1 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table27" class="lekce" data-trida="2" data-unit="1" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 1 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table28" class="lekce" data-trida="2" data-unit="1" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 1 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table29" class="lekce" data-trida="2" data-unit="1" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 1 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table30" class="lekce" data-trida="2" data-unit="2" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 2 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table31" class="lekce" data-trida="2" data-unit="2" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 2 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table32" class="lekce" data-trida="2" data-unit="2" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 2 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table33" class="lekce" data-trida="2" data-unit="2" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 2 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table34" class="lekce" data-trida="2" data-unit="3" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 3 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table35" class="lekce" data-trida="2" data-unit="3" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 3 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table36" class="lekce" data-trida="2" data-unit="3" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 3 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table37" class="lekce" data-trida="2" data-unit="3" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 3 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table38" class="lekce" data-trida="2" data-unit="4" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 4 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table39" class="lekce" data-trida="2" data-unit="4" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 4 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table40" class="lekce" data-trida="2" data-unit="4" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 4 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table41" class="lekce" data-trida="2" data-unit="4" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 4 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table42" class="lekce" data-trida="2" data-unit="5" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 5 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table43" class="lekce" data-trida="2" data-unit="5" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 5 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table44" class="lekce" data-trida="2" data-unit="5" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 5 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table45" class="lekce" data-trida="2" data-unit="5" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 5 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table46" class="lekce" data-trida="2" data-unit="6" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 6 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table47" class="lekce" data-trida="2" data-unit="6" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 6 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table48" class="lekce" data-trida="2" data-unit="6" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 6 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table49" class="lekce" data-trida="2" data-unit="6" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level2Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 2 Unit: 6 Subunit: d</td>
+            </tr>
+        </table>
+        
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100" id="table50" class="lekce" data-trida="3" data-unit="1" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 1 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table51" class="lekce" data-trida="3" data-unit="1" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 1 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table52" class="lekce" data-trida="3" data-unit="1" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 1 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table53" class="lekce" data-trida="3" data-unit="1" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 1 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table54" class="lekce" data-trida="3" data-unit="2" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 2 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table55" class="lekce" data-trida="3" data-unit="2" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 2 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table56" class="lekce" data-trida="3" data-unit="2" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 2 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table57" class="lekce" data-trida="3" data-unit="2" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 2 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table58" class="lekce" data-trida="3" data-unit="3" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 3 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table59" class="lekce" data-trida="3" data-unit="3" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 3 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table60" class="lekce" data-trida="3" data-unit="3" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 3 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table61" class="lekce" data-trida="3" data-unit="3" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrazky/level3Cover.jpg" id="obrazek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 3 Unit: 3 Subunit: d</td>
+            </tr>
+        </table>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100" id="table74" class="lekce" data-trida="4" data-unit="1" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 1 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table75" class="lekce" data-trida="4" data-unit="1" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 1 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table76" class="lekce" data-trida="4" data-unit="1" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 1 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table77" class="lekce" data-trida="4" data-unit="1" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 1 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table78" class="lekce" data-trida="4" data-unit="2" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 2 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table79" class="lekce" data-trida="4" data-unit="2" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 2 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table80" class="lekce" data-trida="4" data-unit="2" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 2 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table81" class="lekce" data-trida="4" data-unit="2" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 2 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table82" class="lekce" data-trida="4" data-unit="3" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 3 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table83" class="lekce" data-trida="4" data-unit="3" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 3 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table84" class="lekce" data-trida="4" data-unit="3" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 3 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table85" class="lekce" data-trida="4" data-unit="3" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 3 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table86" class="lekce" data-trida="4" data-unit="4" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 4 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table87" class="lekce" data-trida="4" data-unit="4" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 4 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table88" class="lekce" data-trida="4" data-unit="4" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 4 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table89" class="lekce" data-trida="4" data-unit="4" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 4 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table90" class="lekce" data-trida="4" data-unit="5" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 5 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table91" class="lekce" data-trida="4" data-unit="5" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 5 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table92" class="lekce" data-trida="4" data-unit="5" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 5 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table93" class="lekce" data-trida="4" data-unit="5" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 5 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table94" class="lekce" data-trida="4" data-unit="6" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 6 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table95" class="lekce" data-trida="4" data-unit="6" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 6 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table96" class="lekce" data-trida="4" data-unit="6" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 6 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table97" class="lekce" data-trida="4" data-unit="6" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level4Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 4 Unit: 6 Subunit: d</td>
+            </tr>
+        </table>
+        
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100" id="table98" class="lekce" data-trida="5" data-unit="1" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 1 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table99" class="lekce" data-trida="5" data-unit="1" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 1 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table100" class="lekce" data-trida="5" data-unit="1" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 1 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table101" class="lekce" data-trida="5" data-unit="1" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 1 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table102" class="lekce" data-trida="5" data-unit="2" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 2 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table103" class="lekce" data-trida="5" data-unit="2" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 2 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table104" class="lekce" data-trida="5" data-unit="2" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 2 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table105" class="lekce" data-trida="5" data-unit="2" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 2 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table106" class="lekce" data-trida="5" data-unit="3" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 3 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table107" class="lekce" data-trida="5" data-unit="3" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 3 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table108" class="lekce" data-trida="5" data-unit="3" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 3 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table109" class="lekce" data-trida="5" data-unit="3" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 3 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table110" class="lekce" data-trida="5" data-unit="4" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 4 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table111" class="lekce" data-trida="5" data-unit="4" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 4 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table112" class="lekce" data-trida="5" data-unit="4" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 4 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table113" class="lekce" data-trida="5" data-unit="4" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 4 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table114" class="lekce" data-trida="5" data-unit="5" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 5 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table115" class="lekce" data-trida="5" data-unit="5" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 5 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table116" class="lekce" data-trida="5" data-unit="5" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 5 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table117" class="lekce" data-trida="5" data-unit="5" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 5 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table118" class="lekce" data-trida="5" data-unit="6" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 6 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table119" class="lekce" data-trida="5" data-unit="6" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 6 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table120" class="lekce" data-trida="5" data-unit="6" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 6 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table121" class="lekce" data-trida="5" data-unit="6" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level5Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 5 Unit: 6 Subunit: d</td>
+            </tr>
+        </table>
+        
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100" id="table122" class="lekce" data-trida="6" data-unit="1" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 1 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table123" class="lekce" data-trida="6" data-unit="1" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 1 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table124" class="lekce" data-trida="6" data-unit="1" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 1 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table125" class="lekce" data-trida="6" data-unit="1" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 1 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table126" class="lekce" data-trida="6" data-unit="2" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 2 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table127" class="lekce" data-trida="6" data-unit="2" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 2 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table128" class="lekce" data-trida="6" data-unit="2" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 2 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table129" class="lekce" data-trida="6" data-unit="2" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 2 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table130" class="lekce" data-trida="6" data-unit="3" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 3 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table131" class="lekce" data-trida="6" data-unit="3" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 3 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table132" class="lekce" data-trida="6" data-unit="3" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 3 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table133" class="lekce" data-trida="6" data-unit="3" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 3 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table134" class="lekce" data-trida="6" data-unit="4" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 4 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table135" class="lekce" data-trida="6" data-unit="4" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 4 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table136" class="lekce" data-trida="6" data-unit="4" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 4 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table137" class="lekce" data-trida="6" data-unit="4" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 4 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table138" class="lekce" data-trida="6" data-unit="5" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 5 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table139" class="lekce" data-trida="6" data-unit="5" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 5 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table140" class="lekce" data-trida="6" data-unit="5" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 5 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table141" class="lekce" data-trida="6" data-unit="5" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 5 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table142" class="lekce" data-trida="6" data-unit="6" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 6 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table143" class="lekce" data-trida="6" data-unit="6" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 6 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table144" class="lekce" data-trida="6" data-unit="6" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 6 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table145" class="lekce" data-trida="6" data-unit="6" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level6Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 6 Unit: 6 Subunit: d</td>
+            </tr>
+        </table>
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100" id="table146" class="lekce" data-trida="7" data-unit="1" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 1 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table147" class="lekce" data-trida="7" data-unit="1" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 1 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table148" class="lekce" data-trida="7" data-unit="1" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 1 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table149" class="lekce" data-trida="7" data-unit="1" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 1 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table150" class="lekce" data-trida="7" data-unit="2" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 2 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table151" class="lekce" data-trida="7" data-unit="2" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 2 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table152" class="lekce" data-trida="7" data-unit="2" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 2 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table153" class="lekce" data-trida="7" data-unit="2" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 2 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table154" class="lekce" data-trida="7" data-unit="3" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 3 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table155" class="lekce" data-trida="7" data-unit="3" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 3 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table156" class="lekce" data-trida="7" data-unit="3" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 3 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table157" class="lekce" data-trida="7" data-unit="3" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 3 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table158" class="lekce" data-trida="7" data-unit="4" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 4 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table159" class="lekce" data-trida="7" data-unit="4" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 4 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table160" class="lekce" data-trida="7" data-unit="4" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 4 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table161" class="lekce" data-trida="7" data-unit="4" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 4 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table162" class="lekce" data-trida="7" data-unit="5" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 5 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table163" class="lekce" data-trida="7" data-unit="5" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 5 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table164" class="lekce" data-trida="7" data-unit="5" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 5 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table165" class="lekce" data-trida="7" data-unit="5" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 5 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table166" class="lekce" data-trida="7" data-unit="6" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 6 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table167" class="lekce" data-trida="7" data-unit="6" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 6 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table168" class="lekce" data-trida="7" data-unit="6" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 6 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table169" class="lekce" data-trida="7" data-unit="6" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level7Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 7 Unit: 6 Subunit: d</td>
+            </tr>
+        </table>
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100" id="table170" class="lekce" data-trida="8" data-unit="1" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 1 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table171" class="lekce" data-trida="8" data-unit="1" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 1 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table172" class="lekce" data-trida="8" data-unit="1" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 1 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table173" class="lekce" data-trida="8" data-unit="1" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 1 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table174" class="lekce" data-trida="8" data-unit="2" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 2 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table175" class="lekce" data-trida="8" data-unit="2" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 2 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table176" class="lekce" data-trida="8" data-unit="2" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 2 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table177" class="lekce" data-trida="8" data-unit="2" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 2 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table178" class="lekce" data-trida="8" data-unit="3" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 3 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table179" class="lekce" data-trida="8" data-unit="3" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 3 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table180" class="lekce" data-trida="8" data-unit="3" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 3 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table181" class="lekce" data-trida="8" data-unit="3" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 3 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table182" class="lekce" data-trida="8" data-unit="4" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 4 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table183" class="lekce" data-trida="8" data-unit="4" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 4 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table184" class="lekce" data-trida="8" data-unit="4" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 4 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table185" class="lekce" data-trida="8" data-unit="4" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 4 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table186" class="lekce" data-trida="8" data-unit="5" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 5 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table187" class="lekce" data-trida="8" data-unit="5" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 5 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table188" class="lekce" data-trida="8" data-unit="5" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 5 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table189" class="lekce" data-trida="8" data-unit="5" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 5 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table190" class="lekce" data-trida="8" data-unit="6" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 6 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table191" class="lekce" data-trida="8" data-unit="6" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 6 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table192" class="lekce" data-trida="8" data-unit="6" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 6 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table193" class="lekce" data-trida="8" data-unit="6" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level8Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 8 Unit: 6 Subunit: d</td>
+            </tr>
+        </table>
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <table width="100" id="table194" class="lekce" data-trida="9" data-unit="1" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 1 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table195" class="lekce" data-trida="9" data-unit="1" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 1 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table196" class="lekce" data-trida="9" data-unit="1" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 1 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table197" class="lekce" data-trida="9" data-unit="1" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 1 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table198" class="lekce" data-trida="9" data-unit="2" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 2 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table199" class="lekce" data-trida="9" data-unit="2" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 2 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table200" class="lekce" data-trida="9" data-unit="2" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 2 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table201" class="lekce" data-trida="9" data-unit="2" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 2 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table202" class="lekce" data-trida="9" data-unit="3" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 3 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table203" class="lekce" data-trida="9" data-unit="3" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 3 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table204" class="lekce" data-trida="9" data-unit="3" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 3 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table205" class="lekce" data-trida="9" data-unit="3" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 3 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table206" class="lekce" data-trida="9" data-unit="4" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 4 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table207" class="lekce" data-trida="9" data-unit="4" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 4 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table208" class="lekce" data-trida="9" data-unit="4" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 4 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table209" class="lekce" data-trida="9" data-unit="4" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 4 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table210" class="lekce" data-trida="9" data-unit="5" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 5 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table211" class="lekce" data-trida="9" data-unit="5" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 5 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table212" class="lekce" data-trida="9" data-unit="5" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 5 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table213" class="lekce" data-trida="9" data-unit="5" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 5 Subunit: d</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table214" class="lekce" data-trida="9" data-unit="6" data-subunit="a" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 6 Subunit: a</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table215" class="lekce" data-trida="9" data-unit="6" data-subunit="b" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 6 Subunit: b</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table216" class="lekce" data-trida="9" data-unit="6" data-subunit="c" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 6 Subunit: c</td>
+            </tr>
+        </table>
+        
+        <table width="100" id="table217" class="lekce" data-trida="9" data-unit="6" data-subunit="d" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/level9Cover.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Třída: 9 Unit: 6 Subunit: d</td>
+            </tr>
+        </table>
+
+        <table width="100" id="table220" class="lekce" data-NepravidelnáSlovesa="3" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/NepravidelnáSlovesa.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Nepravidelná slovesa - Překlad</td>
+            </tr>
+        </table>
+
+        <table width="100" id="table218" class="lekce" data-NepravidelnáSlovesa="1" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/NepravidelnáSlovesa.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Nepravidelná slovesa - Past simple</td>
+            </tr>
+        </table>
+
+        <table width="100" id="table219" class="lekce" data-NepravidelnáSlovesa="2" onclick="otevriLekci(this)">
+            <tr align="center" height="100">
+                <th><img src="obrázky/NepravidelnáSlovesa.jpg" id="obrázek"></th>
+            </tr>
+            <tr align="left">
+                <td class="popisek">Nepravidelná slovesa - Past participle</td>
+            </tr>
+        </table>
+        
+
+    
+    </div>
+
+    <script src="procvičování.js"></script>
+</body>
+</html>
