@@ -1,1 +1,1 @@
-# Procvi-ov-n-anglick-ch-slov
+# Procvicovani-anglickych-slov
