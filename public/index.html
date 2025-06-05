@@ -6,6 +6,38 @@
     <meta name="description" content="Rozcestník - procvičování anglických slov pro základní školu.">
     <link rel="stylesheet" href="Procvičování.css">
     <title>Procvičování</title>
+
+  <style>
+    .circle-button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 36px;
+      text-align: center;
+      line-height: 60px;
+      text-decoration: none;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .circle-button:hover {
+      background-color: #45a049;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin-right: -80rem;
+      margin-top: -30rem;
+    }
+  </style>
+
 </head>
 <body id="body">
     <h1 align="center" id="nadpis">
@@ -22,6 +54,12 @@
     </nav>
 
     <div id="zpráva"></div>
+
+
+  <div class="button-container">
+    <a href="přidáváníslov.html" class="circle-button" title="Přidat slova">+</a>
+  </div>
+
 
     <form action="registration.php" method="POST" align="left" id="tabulka">
 
@@ -2253,7 +2291,7 @@
 
         <table width="100" id="table220" class="lekce" data-NepravidelnáSlovesa="3" onclick="otevriLekci(this)">
             <tr align="center" height="100">
-                <th><img src="obrázky/NepravidelnáSlovesa.jpg" id="obrázek"></th>
+                <th><img src="obrázky/nepravidelnáslovesa.jpeg" id="obrázek"></th>
             </tr>
             <tr align="left">
                 <td class="popisek">Nepravidelná slovesa - Překlad</td>
@@ -2262,7 +2300,7 @@
 
         <table width="100" id="table218" class="lekce" data-NepravidelnáSlovesa="1" onclick="otevriLekci(this)">
             <tr align="center" height="100">
-                <th><img src="obrázky/NepravidelnáSlovesa.jpg" id="obrázek"></th>
+                <th><img src="obrázky/nepravidelnáslovesa.jpeg" id="obrázek"></th>
             </tr>
             <tr align="left">
                 <td class="popisek">Nepravidelná slovesa - Past simple</td>
@@ -2271,7 +2309,7 @@
 
         <table width="100" id="table219" class="lekce" data-NepravidelnáSlovesa="2" onclick="otevriLekci(this)">
             <tr align="center" height="100">
-                <th><img src="obrázky/NepravidelnáSlovesa.jpg" id="obrázek"></th>
+                <th><img src="obrázky/nepravidelnáslovesa.jpeg" id="obrázek"></th>
             </tr>
             <tr align="left">
                 <td class="popisek">Nepravidelná slovesa - Past participle</td>
