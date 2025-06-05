@@ -6,6 +6,40 @@
     <meta name="description" content="Slovníček s anglickými slovy a jejich českými překlady pro základní školu.">
     <link rel="stylesheet" href="Slovníček.css">
     <title>Slovníček</title>
+
+
+  <style>
+    .circle-button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 36px;
+      text-align: center;
+      line-height: 60px;
+      text-decoration: none;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .circle-button:hover {
+      background-color: #45a049;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin-right: -80rem;
+      margin-top: -30rem;
+    }
+  </style>
+
+
 </head>
 <body id="body">
     <h1 align="center" id="nadpis">
@@ -22,6 +56,12 @@
     </nav>
 
     <div id="zpráva"></div>
+    
+  <div class="button-container">
+    <a href="přidáváníslov.html" class="circle-button" title="Přidat slova">+</a>
+  </div>
+
+
 
     <form align="left" id="tabulka">
 
