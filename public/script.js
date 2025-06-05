@@ -1,11 +1,13 @@
+
 function verifyCode() {
   const code = document.getElementById("access-code").value;
   const errorMsg = document.getElementById("error-msg");
 
-  if (code === "1234") {
+  if (code === "zslesni") {
     document.getElementById("overlay").style.display = "none";
   } else {
     errorMsg.textContent = "Nesprávný kód. Zkus to znovu.";
+    document.getElementById("access-code").value = "";
   }
 }
 
