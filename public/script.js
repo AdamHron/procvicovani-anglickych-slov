@@ -1,20 +1,19 @@
-function overKod() {
-  const kod = document.getElementById("access-code").value;
-  const spravnyKod = "1234";
+function verifyCode() {
+  const code = document.getElementById("access-code").value;
+  const errorMsg = document.getElementById("error-msg");
 
-  if (kod === spravnyKod) {
-    document.getElementById("auth-modal").style.display = "none";
+  if (code === "1234") {
+    document.getElementById("overlay").style.display = "none";
   } else {
-    document.getElementById("error-msg").textContent = "Nesprávný kód!";
-    setTimeout(() => {
-      window.location.href = "https://www.google.com";
-    }, 1500);
+    errorMsg.textContent = "Nesprávný kód. Zkus to znovu.";
   }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("auth-modal").style.display = "flex";
+// Zabrání interakci s obsahem, dokud není kód zadán
+window.addEventListener("load", () => {
+  document.getElementById("overlay").style.display = "flex";
 });
+
 
 
 
