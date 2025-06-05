@@ -1,3 +1,25 @@
+function overKod() {
+  const kod = document.getElementById("access-code").value;
+  const spravnyKod = "1234";
+
+  if (kod === spravnyKod) {
+    document.getElementById("auth-modal").style.display = "none";
+  } else {
+    document.getElementById("error-msg").textContent = "Nesprávný kód!";
+    setTimeout(() => {
+      window.location.href = "https://www.google.com";
+    }, 1500);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("auth-modal").style.display = "flex";
+});
+
+
+
+
+
 async function nactiSlovicka() {
   const res = await fetch("/slovicka");
   let slovicka = await res.json();
