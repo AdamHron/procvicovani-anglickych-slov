@@ -52,6 +52,12 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    document.getElementById("button2").click();
+  }
+});
+
 // Funkce pro nastavení focusu do vstupního pole
 function focusInput() {
   document.getElementById("userAnswer").focus();
