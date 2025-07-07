@@ -46,15 +46,15 @@ nactiSlovicka().then(slovicka => {
 // Zbytek tvého kódu zůstává beze změny:
 
 
-document.addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
-    document.getElementById("button1").click();
-  }
-});
+let currentStep = "odpoved"; // nebo "dalsi"
 
 document.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
-    document.getElementById("button2").click();
+    if (currentStep === "odpoved") {
+      button1.click();
+    } else if (currentStep === "dalsi") {
+      button2.click();
+    }
   }
 });
 
