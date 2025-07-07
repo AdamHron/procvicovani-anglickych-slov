@@ -46,6 +46,17 @@ nactiSlovicka().then(slovicka => {
 // Zbytek tvého kódu zůstává beze změny:
 
 
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    document.getElementById("button1").click();
+  }
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("userAnswer").focus();
+});
+
+
 function getRandomWord() {
     let randomIndex;
 
