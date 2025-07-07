@@ -52,8 +52,10 @@ document.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     if (currentStep === "odpoved") {
       button1.click();
+      currentStep = "dalsi";
     } else if (currentStep === "dalsi") {
       button2.click();
+      currentStep = "odpoved";
     }
   }
 });
