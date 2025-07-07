@@ -52,8 +52,20 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
-window.addEventListener("DOMContentLoaded", function () {
+// Funkce pro nastavení focusu do vstupního pole
+function focusInput() {
   document.getElementById("userAnswer").focus();
+}
+
+// Po načtení stránky
+window.addEventListener("DOMContentLoaded", function() {
+  focusInput();
+});
+
+// Po kliknutí na tlačítko „Další“
+document.getElementById("button2").addEventListener("click", function() {
+  // ... tady můžeš mít další logiku pro novou otázku
+  focusInput(); // kurzor se znovu nastaví do inputu
 });
 
 
